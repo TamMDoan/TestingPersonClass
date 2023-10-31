@@ -121,9 +121,9 @@ public class TestPerson {
     public void testSetNickname(){
         Person person = new Person();
         String expected = "Maru";
-        person.setName(expected);
+        person.setNickname(expected);
 
-        assertEquals(expected, person.getName());
+        assertEquals(expected, person.getNickname());
     }
 
     @Test
