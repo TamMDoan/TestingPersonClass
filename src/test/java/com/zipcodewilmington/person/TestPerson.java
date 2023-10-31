@@ -3,6 +3,8 @@ package com.zipcodewilmington.person;
 import org.junit.Assert;
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
+
 /**
  * Created by leon on 2/12/18.
  */
@@ -20,8 +22,8 @@ public class TestPerson {
         String actualName = person.getName();
         Integer actualAge = person.getAge();
 
-        Assert.assertEquals(expectedName, actualName);
-        Assert.assertEquals(expectedAge, actualAge);
+        assertEquals(expectedName, actualName);
+        assertEquals(expectedAge, actualAge);
     }
 
     @Test
@@ -34,7 +36,7 @@ public class TestPerson {
 
         // Then
         String actual = person.getName();
-        Assert.assertEquals(expected, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -47,7 +49,7 @@ public class TestPerson {
 
         // Then
         Integer actual = person.getAge();
-        Assert.assertEquals(expected, actual);
+        assertEquals(expected, actual);
     }
 
 
@@ -64,8 +66,8 @@ public class TestPerson {
         Integer actualAge = person.getAge();
         String actualName = person.getName();
 
-        Assert.assertEquals(expectedAge, actualAge);
-        Assert.assertEquals(expectedName, actualName);
+        assertEquals(expectedAge, actualAge);
+        assertEquals(expectedName, actualName);
     }
 
     @Test
@@ -79,7 +81,7 @@ public class TestPerson {
         String actual = person.getName();
 
         // Then
-        Assert.assertEquals(expected, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -93,6 +95,52 @@ public class TestPerson {
 
         // Then
         Integer actual = person.getAge();
-        Assert.assertEquals(expected, actual);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetHeight(){
+        Person person = new Person();
+        int expected = 180;
+        person.setHeight(expected);
+
+        assertEquals(expected, person.getHeight());
+
+    }
+
+    @Test
+    public void testSetWeight(){
+        Person person = new Person();
+        int expected = 180;
+        person.setWeight(expected);
+
+        assertEquals(expected, person.getWeight());
+    }
+
+    @Test
+    public void testSetNickname(){
+        Person person = new Person();
+        String expected = "Maru";
+        person.setName(expected);
+
+        assertEquals(expected, person.getName());
+    }
+
+    @Test
+    public void testSetHowManySiblings(){
+        Person person = new Person();
+        int expected = 4;
+        person.setHowManySiblings(expected);
+
+        assertEquals(expected, person.getHowManySiblings());
+    }
+
+    @Test
+    public void testOldestChild(){
+        Person person = new Person();
+        boolean expected = true;
+        person.setOldestChild(expected);
+
+        assertEquals(expected, person.getOldestChild());
     }
 }
